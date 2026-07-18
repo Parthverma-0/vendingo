@@ -3,21 +3,23 @@
 
 export const BRAND = "Vendi 'N' Go";
 
+// "/#section" form so the links also work from pages other than the home page.
 export const NAV_LINKS = [
-  { label: "Opportunity", href: "#opportunity" },
-  { label: "Transparency", href: "#transparency" },
-  { label: "Returns", href: "#returns" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Why Us", href: "#why" },
-  { label: "Locations", href: "#locations" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Opportunity", href: "/#opportunity" },
+  { label: "Transparency", href: "/#transparency" },
+  { label: "Returns", href: "/#returns" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Why Us", href: "/#why" },
+  { label: "Locations", href: "/#locations" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Partner With Us", href: "/location-partner" },
 ];
 
 export const HERO = {
   eyebrow: "India's Fintech Vending Investment Platform",
   title: "Own the machine. Earn the income.",
   subtitle:
-    "Fund a smart, IoT-connected vending machine. Earn transparent, monthly passive income — tracked in real time.",
+    "Fund a smart, IoT-connected vending machine. Earn **transparent, monthly passive income** — tracked in real time.",
   primaryCta: "Start Investing",
   secondaryCta: "See how returns work",
   chips: ["UPI PAYOUTS", "LIVE IOT TRACKING", "GST COMPLIANT"],
@@ -25,7 +27,7 @@ export const HERO = {
 
 export const OPPORTUNITY = {
   heading: "We're opening automated retail to everyone.",
-  body: "Automated retail has quietly built fortunes across the world — but in India it has stayed locked behind big operators. We're changing that, one machine and one investor at a time.",
+  body: "Automated retail has quietly built fortunes across the world — but in India it has stayed locked behind big operators. We're changing that, **one machine and one investor at a time**.",
   idleStat: { value: 180, suffix: "L Cr", label: "of idle household savings in India sitting in low-yield accounts" },
   comparison: {
     label: "Vending machines per population",
@@ -37,7 +39,7 @@ export const OPPORTUNITY = {
 
 export const TRANSPARENCY = {
   heading: "See everything. In real time.",
-  body: "Every dispense, every sale, every restock — reported every 30 seconds straight from the machine. Track stock levels, sales velocity, and revenue live from your dashboard. No black boxes, no monthly mysteries.",
+  body: "Every dispense, every sale, every restock — reported **every 30 seconds** straight from the machine. Track stock levels, sales velocity, and revenue live from your dashboard. **No black boxes, no monthly mysteries.**",
   bullets: [
     "Live stock & inventory levels",
     "Real-time sales velocity",
@@ -54,7 +56,7 @@ export const RETURNS = {
     { value: 13700, prefix: "₹", label: "your share, every month", sub: "projected" },
     { value: 13.7, suffix: "% p.a.", label: "target return on ~₹3L invested", sub: "projected", decimals: 1 },
   ],
-  ownLine: "You own the asset. We handle restocking, servicing, and logistics.",
+  ownLine: "**You own the asset.** We handle restocking, servicing, and logistics.",
   flow: [
     { label: "The Asset", note: "Your machine earns" },
     { label: "Your Share", note: "Profit split, transparent" },
@@ -63,7 +65,7 @@ export const RETURNS = {
   tagline:
     "Vendi 'N' Go. One machine, one investor, one transparent payout at a time.",
   founders:
-    "Founding investors get a preferential 65% profit share. Limited Jaipur pilot slots.",
+    "Founding investors get a **preferential 65% profit share**. Limited Jaipur pilot slots.",
   disclaimer: "Projected. Investments are subject to market risk.",
 };
 
@@ -100,22 +102,22 @@ export const WHY = {
   pillars: [
     {
       title: "Real Asset Backing",
-      body: "Your investment is a physical, revenue-generating machine you own — not a paper promise.",
+      body: "Your investment is a **physical, revenue-generating machine you own** — not a paper promise.",
       span: "lg",
     },
     {
       title: "Complete Transparency",
-      body: "Every sale and restock reported every 30 seconds. You see exactly what your asset earns.",
+      body: "Every sale and restock reported **every 30 seconds**. You see **exactly what your asset earns**.",
       span: "sm",
     },
     {
       title: "Start Small",
-      body: "Enter automated retail from ~₹3L — no operator scale or storefront required.",
+      body: "Enter automated retail from **~₹3L** — no operator scale or storefront required.",
       span: "sm",
     },
     {
       title: "50% recovered in first year",
-      body: "Our target: return roughly half of your invested amount within the first year of operation.",
+      body: "Our target: return roughly **half of your invested amount** within the first year of operation.",
       sub: "Target / projection",
       span: "lg",
     },
@@ -124,7 +126,7 @@ export const WHY = {
 
 export const LOCATIONS = {
   heading: "Our machines work best out there.",
-  body: "We place machines where footfall never stops. Here's where the first Jaipur pilot is rolling out.",
+  body: "We place machines where **footfall never stops**. Here's where the first Jaipur pilot is rolling out.",
   cta: "Talk to Us",
   categories: [
     { name: "Colleges & Coaching", detail: "~150+ colleges · ~3,000+ institutes", x: 28, y: 34 },
@@ -170,55 +172,103 @@ export const NUMBERS = {
 
 export const FAQ = [
   {
-    q: "Is my money safe?",
-    a: "Your investment buys a real, physical asset — a vending machine you legally own, backed by signed documents. Unlike pooled schemes, your capital is tied to a tangible, revenue-generating machine, not a promise. All returns are projected and subject to market risk; please read your investor documents carefully.",
-    flagged: false,
+    q: "Do I actually own the vending machine?",
+    a: "Yes. Every investment is linked to a specific vending machine. You'll receive documentation confirming your ownership, while Vendingo manages installation, stocking, maintenance, and day-to-day operations on your behalf.",
   },
   {
-    q: "What if the machine breaks down?",
-    a: "[CLIENT TO CONFIRM] We handle servicing and maintenance, with IoT alerts flagging issues fast. Please confirm the exact service-level commitment, downtime handling, and any warranty/insurance terms before publishing.",
-    flagged: true,
+    q: "How do I earn money?",
+    a: "Each vending machine generates revenue through product sales. After deducting operational expenses such as inventory, maintenance, and location costs, profits are distributed according to your ownership agreement.",
   },
   {
-    q: "When do I receive returns?",
-    a: "[CLIENT TO CONFIRM] Payouts are intended to be monthly via UPI. Please confirm the exact payout cycle, first-payout timing after activation, and any minimum-threshold rules.",
-    flagged: true,
+    q: "Can I track my machine in real time?",
+    a: "Absolutely. Through your investor dashboard, you can monitor sales, inventory levels, machine health, uptime, and earnings anytime, from anywhere.",
   },
   {
-    q: "Can I withdraw my investment?",
-    a: "[CLIENT TO CONFIRM] As you own a physical asset, exit terms (resale, buy-back, lock-in period) need to be specified. Please confirm the exit and liquidity policy before publishing.",
-    flagged: true,
+    q: "Who handles maintenance and restocking?",
+    a: "Vendingo takes care of everything—from refilling products and routine maintenance to technical support and repairs. You don't need to visit or manage the machine yourself.",
   },
   {
-    q: "Do I need to manage the machine?",
-    a: "No. You own the asset; we handle restocking, servicing, and logistics end-to-end. Your role is to fund the machine and collect transparent monthly payouts. [CLIENT TO CONFIRM any owner responsibilities.]",
-    flagged: true,
+    q: "What happens if my machine stops working?",
+    a: "Our operations team is notified automatically through our monitoring system. We work to restore the machine as quickly as possible to minimize downtime and protect your earnings.",
   },
   {
-    q: "Is this a chit fund or MLM?",
-    a: "[CLIENT TO CONFIRM] No — there is no recruitment, no pooling into a common pot, and no referral-chain income. Each investor owns a specific physical machine. Please confirm the exact legal structure and regulatory positioning before publishing.",
-    flagged: true,
+    q: "Is my investment guaranteed?",
+    a: "No investment can guarantee returns. Revenue depends on factors such as location performance, customer demand, and operational costs. We focus on maximizing performance through careful location selection and active management.",
+  },
+  {
+    q: "Where will my vending machine be installed?",
+    a: "Machines are placed in carefully selected high-footfall locations such as offices, colleges, hospitals, malls, residential communities, and commercial spaces after evaluating demand and accessibility.",
+  },
+  {
+    q: "Can I choose the location of my machine?",
+    a: "We're happy to consider your preferred location if it meets our operational requirements and receives approval. Otherwise, we'll place your machine where we believe it has the highest earning potential.",
+  },
+  {
+    q: "What products are sold in the machines?",
+    a: "Our machines offer a curated selection of snacks, beverages, and everyday convenience products. Product mixes are continuously optimized based on customer demand and sales data.",
+  },
+  {
+    q: "What if a location performs poorly?",
+    a: "We regularly analyze machine performance. If a location consistently underperforms, we'll evaluate relocating the machine to a better-performing site whenever feasible.",
+  },
+  {
+    q: "Are the machines insured?",
+    a: "We work to protect our assets through appropriate operational safeguards. Insurance coverage, where applicable, will be clearly outlined in your investment agreement.",
+  },
+  {
+    q: "How often will I receive earnings?",
+    a: "Investor payouts are processed according to the schedule defined in your investment agreement, along with transparent reports showing revenue, expenses, and net earnings.",
+  },
+  {
+    q: "Is there a minimum investment?",
+    a: "The minimum investment amount depends on the ownership model available during the current funding round. You'll always see the required investment before committing.",
+  },
+  {
+    q: "What makes Vendingo different from buying a vending machine myself?",
+    a: "Buying a machine yourself means handling location acquisition, stocking, maintenance, repairs, customer support, and operations. With Vendingo, you own the asset while we manage the entire operational lifecycle.",
+  },
+  {
+    q: "How transparent is the platform?",
+    a: "Transparency is at the core of Vendingo. Investors receive access to performance metrics, earnings reports, operational updates, and machine status through a centralized dashboard.",
+  },
+  {
+    q: "What happens if I want to exit my investment?",
+    a: "Exit options depend on the investment agreement and ownership model. We'll provide clear terms regarding transfers, buybacks, or other exit mechanisms before you invest.",
+  },
+  {
+    q: "How is investor data kept secure?",
+    a: "We use industry-standard security practices to protect your personal information, account access, and transaction data. Sensitive information is encrypted and handled securely.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Simply submit your interest through our website. Our team will guide you through the onboarding process, explain the investment model, answer your questions, and help you complete the required documentation.",
   },
 ];
 
 export const FINAL_CTA = {
   heading: "Your machine could be earning right now.",
-  body: "Join the founding investors. Limited machine slots in the first phase.",
+  body: "Join the founding investors. **Limited machine slots** in the first phase.",
   cta: "Claim Your Machine Slot",
-  sub: "No obligation. We'll get in touch within 24 hours.",
+  sub: "We'll get in touch **within 24 hours**.",
 };
 
 export const FOOTER = {
   tagline: "India's Fintech Vending Investment Platform",
   quickLinks: [
-    { label: "Home", href: "#hero" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Why Vendi 'N' Go", href: "#why" },
-    { label: "Locations", href: "#locations" },
-    { label: "Blog", href: "#" },
-    { label: "Become an Investor", href: "#final-cta" },
+    { label: "Home", href: "/#hero" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Why Vendi 'N' Go", href: "/#why" },
+    { label: "Locations", href: "/#locations" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Become an Investor", href: "/apply" },
+    { label: "Partner With Us", href: "/location-partner" },
   ],
-  contacts: ["hello@vendingo.in", "vendingoprivatelimited@gmail.com", "Jaipur, India"],
+  contacts: [
+    "hello@vendingo.in",
+    "vendingoprivatelimited@gmail.com",
+    "+91 92618 73063",
+    "Jaipur, India",
+  ],
   disclaimer:
     "Investments are subject to market risks. Please read all investor documents carefully before investing.",
   legal: ["Privacy", "Terms", "Investor Agreement"],

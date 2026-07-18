@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { RETURNS } from "@/lib/content";
+import { em } from "@/lib/em";
 import Section from "../ui/Section";
 import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
@@ -9,122 +10,116 @@ import CountUp from "../ui/CountUp";
 
 function ProjectedTag() {
   return (
-    <span className="ml-2 inline-flex items-center rounded-full border border-iris-cyan/30 bg-iris-cyan/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-iris-cyan">
+    <span className="mt-3 inline-flex w-fit items-center rounded-full border border-violet/30 bg-violet/[0.06] px-2.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-violet">
       Projected
     </span>
   );
 }
 
+// Signature animation: the three headline figures rise in as ruled editorial
+// columns and count up in sequence; the payout flow then draws its connector line.
 export default function PassiveIncome() {
   return (
-    <Section id="returns">
-      <SectionHeading eyebrow="Passive Income" title={RETURNS.heading} />
-      <Reveal className="mx-auto mt-6 max-w-2xl text-center text-lg text-lavender">
-        {RETURNS.intro}
-      </Reveal>
+    <div className="bg-tint-50">
+      <Section id="returns">
+        <SectionHeading eyebrow="Passive Income" title={RETURNS.heading} />
+        <Reveal className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-ink-soft">
+          {RETURNS.intro}
+        </Reveal>
 
-      {/* Figures */}
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
-        {RETURNS.figures.map((f, i) => (
-          <Reveal
-            key={f.label}
-            delay={i * 0.1}
-            className="glass-strong relative overflow-hidden rounded-3xl p-7"
-          >
-            <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full iris-gradient opacity-20 blur-2xl" />
-            <div className="flex items-baseline">
-              {f.prefix && (
-                <span className="text-2xl font-semibold text-lavender">{f.prefix}</span>
-              )}
-              <CountUp
-                to={f.value}
-                decimals={f.decimals ?? 0}
-                suffix={f.suffix ?? ""}
-                className="iris-text text-4xl font-bold tracking-tight sm:text-5xl"
-              />
-            </div>
-            <p className="mt-3 text-sm text-lavender">{f.label}</p>
-            <ProjectedTag />
-          </Reveal>
-        ))}
-      </div>
-
-      {/* Payout flow */}
-      <Reveal className="mt-10">
-        <div className="glass-strong relative overflow-hidden rounded-3xl p-8 sm:p-10">
-          <div className="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
-            {RETURNS.flow.map((node, i) => (
-              <FlowNode key={node.label} node={node} index={i} isLast={i === RETURNS.flow.length - 1} />
-            ))}
-          </div>
-
-          {/* animated payout pulse traveling the flow */}
-          <div className="pointer-events-none absolute inset-x-10 top-1/2 hidden h-px md:block">
-            <motion.span
-              className="absolute top-0 h-2 w-2 -translate-y-1/2 rounded-full bg-iris-violet shadow-[0_0_14px_4px_rgba(157,92,255,0.7)]"
-              animate={{ left: ["0%", "100%"] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
-
-          <p className="mt-8 border-t border-white/10 pt-6 text-center text-base text-white/90">
-            {RETURNS.ownLine}
-          </p>
-        </div>
-      </Reveal>
-
-      {/* Tagline + founders + disclaimer */}
-      <Reveal className="mt-12 text-center">
-        <p className="mx-auto max-w-3xl text-balance text-2xl font-medium leading-snug text-white sm:text-3xl">
-          {RETURNS.tagline}
-        </p>
-        <div className="mx-auto mt-6 inline-flex max-w-2xl flex-col items-center gap-3">
-          <span className="iris-border rounded-full bg-white/[0.03] px-5 py-2.5 text-sm font-medium text-white">
-            {RETURNS.founders}
-          </span>
-          <span className="text-xs text-lavender/80">⚠ {RETURNS.disclaimer}</span>
-        </div>
-      </Reveal>
-    </Section>
-  );
-}
-
-function FlowNode({
-  node,
-  index,
-  isLast,
-}: {
-  node: { label: string; note: string };
-  index: number;
-  isLast: boolean;
-}) {
-  return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 140, damping: 16, delay: index * 0.2 }}
-        className="relative z-10 rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-center"
-      >
-        <div className="mx-auto mb-3 grid h-11 w-11 place-items-center rounded-xl iris-gradient animate-iris-drift text-lg font-bold text-white">
-          {index + 1}
-        </div>
-        <p className="text-base font-semibold text-white">{node.label}</p>
-        <p className="mt-1 text-xs text-lavender">{node.note}</p>
-      </motion.div>
-
-      {!isLast && (
+        {/* Figures — ruled editorial columns */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.2 + 0.15 }}
-          className="mx-auto hidden text-2xl text-iris-cyan md:block"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-15% 0px" }}
+          variants={{ show: { transition: { staggerChildren: 0.18 } } }}
+          className="mt-16 grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x md:divide-ink/10"
         >
-          →
+          {RETURNS.figures.map((f) => (
+            <motion.div
+              key={f.label}
+              variants={{
+                hidden: { opacity: 0, y: 36 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", stiffness: 90, damping: 18 },
+                },
+              }}
+              className="flex flex-col border-t-2 border-ink pt-6 md:px-8 md:first:pl-0 md:last:pr-0"
+            >
+              <div className="flex items-baseline">
+                {f.prefix && (
+                  <span className="font-display text-2xl font-bold text-ink-muted">
+                    {f.prefix}
+                  </span>
+                )}
+                <CountUp
+                  to={f.value}
+                  decimals={f.decimals ?? 0}
+                  suffix={f.suffix ?? ""}
+                  className="font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl"
+                />
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{f.label}</p>
+              <ProjectedTag />
+            </motion.div>
+          ))}
         </motion.div>
-      )}
-    </>
+
+        {/* Payout flow */}
+        <Reveal className="mt-16">
+          <div className="relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-8 sm:p-10">
+            <div className="relative grid items-stretch gap-6 md:grid-cols-3">
+              {/* connector line that draws across behind the nodes */}
+              <div className="pointer-events-none absolute inset-x-16 top-[26px] hidden h-px md:block">
+                <motion.span
+                  className="absolute inset-y-0 left-0 w-full origin-left bg-violet/40"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, margin: "-20% 0px" }}
+                  transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+                />
+              </div>
+              {RETURNS.flow.map((node, i) => (
+                <motion.div
+                  key={node.label}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-15% 0px" }}
+                  transition={{ type: "spring", stiffness: 140, damping: 16, delay: i * 0.25 }}
+                  className="relative z-10 flex flex-col items-center text-center"
+                >
+                  <span className="grid h-[52px] w-[52px] place-items-center rounded-2xl bg-violet font-display text-lg font-bold text-white">
+                    {i + 1}
+                  </span>
+                  <p className="mt-4 font-display text-base font-bold text-ink">{node.label}</p>
+                  <p className="mt-1 text-xs text-ink-muted">{node.note}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <p className="mt-9 border-t border-ink/10 pt-6 text-center text-base text-ink">
+              {em(RETURNS.ownLine)}
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Tagline + founders + disclaimer */}
+        <Reveal className="mt-14 text-center">
+          <p className="display mx-auto max-w-3xl text-2xl text-ink sm:text-3xl">
+            {RETURNS.tagline}
+          </p>
+          <div className="mx-auto mt-7 flex max-w-2xl flex-col items-center gap-3">
+            <span className="rounded-full border border-violet/30 bg-white px-5 py-2.5 text-sm font-medium text-ink">
+              {em(RETURNS.founders)}
+            </span>
+            <span className="font-mono text-[11px] tracking-wide text-ink-muted">
+              ⚠ {RETURNS.disclaimer}
+            </span>
+          </div>
+        </Reveal>
+      </Section>
+    </div>
   );
 }

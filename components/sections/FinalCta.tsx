@@ -1,59 +1,85 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FINAL_CTA } from "@/lib/content";
+import { em } from "@/lib/em";
 import IrisButton from "../ui/IrisButton";
 
-export default function FinalCta() {
+type Props = {
+  id?: string;
+  eyebrow?: string;
+  content?: typeof FINAL_CTA;
+  ctaHref?: string;
+  secondary?: { label: string; href: string };
+};
+
+// Signature animation: the violet panel zooms open — scale, lift and fade all
+// driven by scroll progress as it enters the viewport.
+// Defaults render the investor CTA; the partner page passes its own content.
+export default function FinalCta({
+  id = "final-cta",
+  eyebrow = "Founding Investor Access",
+  content = FINAL_CTA,
+  ctaHref = "/apply",
+  secondary,
+}: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center 60%"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [80, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+
   return (
-    <section id="final-cta" className="relative px-5 py-24 sm:px-8 sm:py-32">
-      <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] px-6 py-16 text-center sm:px-12 sm:py-24">
-        {/* full holographic wash */}
-        <div className="absolute inset-0 iris-gradient animate-iris-drift opacity-90" />
-        <div className="absolute inset-0 bg-canvas-deep/55" />
+    <section id={id} ref={ref} className="relative px-5 py-24 sm:px-8 sm:py-32">
+      <motion.div
+        style={{ scale, y, opacity }}
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-violet px-6 py-16 text-center sm:px-12 sm:py-24"
+      >
+        {/* deep-violet wash + slow breathing highlight */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet via-violet to-violet-deep" />
         <motion.div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(255,255,255,0.25),transparent_70%)]"
-          animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
+          className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_40%,rgba(255,255,255,0.18),transparent_70%)]"
+          animate={{ opacity: [0.4, 0.7, 0.4], scale: [1, 1.08, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 grid-texture opacity-20" />
 
         <div className="relative">
-          <motion.h2
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 18 }}
-            className="mx-auto max-w-2xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
-          >
-            {FINAL_CTA.heading}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 90, damping: 18, delay: 0.1 }}
-            className="mx-auto mt-5 max-w-xl text-lg text-white/90"
-          >
-            {FINAL_CTA.body}
-          </motion.p>
+          <span className="eyebrow !text-white/70">{eyebrow}</span>
+          <h2 className="display mx-auto mt-5 max-w-2xl text-4xl text-white sm:text-5xl lg:text-6xl">
+            {content.heading}
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+            {em(content.body, "dark")}
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 160, damping: 14, delay: 0.2 }}
-            className="mt-10 flex justify-center"
-          >
-            <IrisButton href="#" pulse className="px-9 py-4 text-base">
-              {FINAL_CTA.cta} →
+          <div className="mt-10 flex justify-center">
+            <IrisButton
+              href={ctaHref}
+              variant="inverse"
+              pulse
+              className="px-9 py-4 text-base"
+            >
+              {content.cta} →
             </IrisButton>
-          </motion.div>
+          </div>
 
-          <p className="mt-6 text-sm text-white/80">{FINAL_CTA.sub}</p>
+          <p className="mt-6 text-sm text-white/75">{em(content.sub, "dark")}</p>
+
+          {secondary && (
+            <a
+              href={secondary.href}
+              className="mt-4 inline-block text-sm font-medium text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
+            >
+              {secondary.label}
+            </a>
+          )}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

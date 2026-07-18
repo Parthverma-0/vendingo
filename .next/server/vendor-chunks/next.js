@@ -20,6 +20,26 @@ eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Inter_f3
 
 /***/ }),
 
+/***/ "(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"JetBrains_Mono\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-mono\",\"display\":\"swap\"}],\"variableName\":\"mono\"}":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"JetBrains_Mono","arguments":[{"subsets":["latin"],"variable":"--font-mono","display":"swap"}],"variableName":"mono"} ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__JetBrains_Mono_3c557b', '__JetBrains_Mono_Fallback_3c557b'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_3c557b\",\n\t\"variable\": \"__variable_3c557b\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImFwcFxcXFxsYXlvdXQudHN4XCIsXCJpbXBvcnRcIjpcIkpldEJyYWluc19Nb25vXCIsXCJhcmd1bWVudHNcIjpbe1wic3Vic2V0c1wiOltcImxhdGluXCJdLFwidmFyaWFibGVcIjpcIi0tZm9udC1tb25vXCIsXCJkaXNwbGF5XCI6XCJzd2FwXCJ9XSxcInZhcmlhYmxlTmFtZVwiOlwibW9ub1wifSIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0EsV0FBVyxrR0FBa0c7QUFDN0c7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdmVuZGktbi1nby8uL25vZGVfbW9kdWxlcy9uZXh0L2ZvbnQvZ29vZ2xlL3RhcmdldC5jc3M/NmIzZCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJzdHlsZVwiOiB7XCJmb250RmFtaWx5XCI6XCInX19KZXRCcmFpbnNfTW9ub18zYzU1N2InLCAnX19KZXRCcmFpbnNfTW9ub19GYWxsYmFja18zYzU1N2InXCIsXCJmb250U3R5bGVcIjpcIm5vcm1hbFwifSxcblx0XCJjbGFzc05hbWVcIjogXCJfX2NsYXNzTmFtZV8zYzU1N2JcIixcblx0XCJ2YXJpYWJsZVwiOiBcIl9fdmFyaWFibGVfM2M1NTdiXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"JetBrains_Mono\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-mono\",\"display\":\"swap\"}],\"variableName\":\"mono\"}\n");
+
+/***/ }),
+
+/***/ "(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Space_Grotesk\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-grotesk\",\"display\":\"swap\"}],\"variableName\":\"grotesk\"}":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Space_Grotesk","arguments":[{"subsets":["latin"],"variable":"--font-grotesk","display":"swap"}],"variableName":"grotesk"} ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Space_Grotesk_dd5b2f', '__Space_Grotesk_Fallback_dd5b2f'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_dd5b2f\",\n\t\"variable\": \"__variable_dd5b2f\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImFwcFxcXFxsYXlvdXQudHN4XCIsXCJpbXBvcnRcIjpcIlNwYWNlX0dyb3Rlc2tcIixcImFyZ3VtZW50c1wiOlt7XCJzdWJzZXRzXCI6W1wibGF0aW5cIl0sXCJ2YXJpYWJsZVwiOlwiLS1mb250LWdyb3Rlc2tcIixcImRpc3BsYXlcIjpcInN3YXBcIn1dLFwidmFyaWFibGVOYW1lXCI6XCJncm90ZXNrXCJ9IiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSxXQUFXLGdHQUFnRztBQUMzRztBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly92ZW5kaS1uLWdvLy4vbm9kZV9tb2R1bGVzL25leHQvZm9udC9nb29nbGUvdGFyZ2V0LmNzcz8zMzQwIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInN0eWxlXCI6IHtcImZvbnRGYW1pbHlcIjpcIidfX1NwYWNlX0dyb3Rlc2tfZGQ1YjJmJywgJ19fU3BhY2VfR3JvdGVza19GYWxsYmFja19kZDViMmYnXCIsXCJmb250U3R5bGVcIjpcIm5vcm1hbFwifSxcblx0XCJjbGFzc05hbWVcIjogXCJfX2NsYXNzTmFtZV9kZDViMmZcIixcblx0XCJ2YXJpYWJsZVwiOiBcIl9fdmFyaWFibGVfZGQ1YjJmXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Space_Grotesk\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-grotesk\",\"display\":\"swap\"}],\"variableName\":\"grotesk\"}\n");
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/next/dist/api/image.js":
 /*!*********************************************!*\
   !*** ./node_modules/next/dist/api/image.js ***!

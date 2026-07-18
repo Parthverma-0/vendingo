@@ -5,68 +5,75 @@ import { TESTIMONIALS } from "@/lib/content";
 import Section from "../ui/Section";
 import SectionHeading from "../ui/SectionHeading";
 
-export default function Testimonials() {
+type Props = {
+  id?: string;
+  heading?: string;
+  tag?: string;
+  items?: typeof TESTIMONIALS.items;
+};
+
+// Signature animation: the two testimonial cards converge — sliding in from
+// opposite edges of the page as you scroll to them.
+// Defaults render the investor testimonials; the partner page passes its own.
+export default function Testimonials({
+  id = "testimonials",
+  heading = TESTIMONIALS.heading,
+  tag = TESTIMONIALS.tag,
+  items = TESTIMONIALS.items,
+}: Props) {
   return (
-    <Section id="testimonials">
-      <div className="flex flex-col items-center">
-        <SectionHeading eyebrow="Testimonials" title={TESTIMONIALS.heading} />
-        <motion.span
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 160, damping: 16, delay: 0.1 }}
-          className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md"
-        >
-          ⚠ {TESTIMONIALS.tag}
-        </motion.span>
-      </div>
-
-      <div className="mt-14 grid gap-6 md:grid-cols-2">
-        {TESTIMONIALS.items.map((t, i) => (
-          <motion.figure
-            key={t.name}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-12% 0px" }}
-            transition={{ type: "spring", stiffness: 100, damping: 18, delay: i * 0.15 }}
-            className="glass-strong group relative overflow-hidden rounded-3xl p-8 sm:p-10"
+    <div className="hairline-t bg-paper">
+      <Section id={id}>
+        <div className="flex flex-col items-center">
+          <SectionHeading eyebrow="Testimonials" title={heading} />
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 160, damping: 16, delay: 0.1 }}
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-ink/15 bg-tint-100 px-4 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink"
           >
-            {/* sheen sweep on entrance */}
-            <motion.div
-              aria-hidden
-              className="sheen-sweep"
-              initial={{ x: "-160%", skewX: "-20deg" }}
-              whileInView={{ x: "260%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.1, ease: "easeInOut", delay: 0.3 + i * 0.15 }}
-            />
+            ⚠ {tag}
+          </motion.span>
+        </div>
 
-            <div className="relative">
-              <span className="iris-text text-6xl font-bold leading-none">&ldquo;</span>
-              <blockquote className="-mt-4 text-lg leading-relaxed text-white/90">
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
+          {items.map((t, i) => (
+            <motion.figure
+              key={t.name}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-12% 0px" }}
+              transition={{ type: "spring", stiffness: 70, damping: 18, delay: i * 0.1 }}
+              className="relative flex flex-col rounded-3xl border border-ink/10 bg-white p-8 sm:p-10"
+            >
+              <span className="font-display text-6xl font-bold leading-none text-violet">
+                &ldquo;
+              </span>
+              <blockquote className="-mt-3 text-lg leading-relaxed text-ink">
                 {t.quote}
               </blockquote>
-              <figcaption className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">
+              <figcaption className="mt-auto flex items-center justify-between border-t border-ink/10 pt-6">
                 <div className="flex items-center gap-3">
-                  <span className="grid h-11 w-11 place-items-center rounded-full iris-gradient animate-iris-drift text-sm font-bold text-white">
+                  <span className="grid h-11 w-11 place-items-center rounded-full bg-violet font-display text-sm font-bold text-white">
                     {t.name.charAt(0)}
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-white">{t.name}</p>
-                    <p className="text-xs text-lavender">{t.place}</p>
+                    <p className="font-display text-sm font-bold text-ink">{t.name}</p>
+                    <p className="text-xs text-ink-muted">{t.place}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="iris-text text-lg font-bold">{t.amount}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-lavender/70">
+                  <p className="font-display text-lg font-bold text-violet">{t.amount}</p>
+                  <p className="font-mono text-[9px] uppercase tracking-wider text-ink-muted">
                     projected
                   </p>
                 </div>
               </figcaption>
-            </div>
-          </motion.figure>
-        ))}
-      </div>
-    </Section>
+            </motion.figure>
+          ))}
+        </div>
+      </Section>
+    </div>
   );
 }
