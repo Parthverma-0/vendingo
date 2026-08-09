@@ -54,7 +54,7 @@ export const RETURNS = {
   figures: [
     { value: 100000, prefix: "₹", label: "avg. monthly gross revenue / machine", sub: "projected" },
     { value: 13700, prefix: "₹", label: "your share, every month", sub: "projected" },
-    { value: 13.7, suffix: "% p.a.", label: "target return on ~₹3L invested", sub: "projected", decimals: 1 },
+    { value: 54.8, suffix: "% p.a.", label: "target return on ~₹3L invested", sub: "projected", decimals: 1 },
   ],
   ownLine: "**You own the asset.** We handle restocking, servicing, and logistics.",
   flow: [
@@ -124,16 +124,25 @@ export const WHY = {
   ],
 };
 
+export const WHATSAPP_NUMBER = "919261873063";
+export const WHATSAPP_LINK = (message: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 export const LOCATIONS = {
   heading: "Our machines work best out there.",
   body: "We place machines where **footfall never stops**. Here's where the first Jaipur pilot is rolling out.",
   cta: "Talk to Us",
+  mapEmbedSrc: "https://www.google.com/maps?q=Jaipur,Rajasthan&z=11&output=embed",
+  live: [
+    { name: "GCEC", query: "GCEC Jaipur" },
+    { name: "VGU — Vivekananda Global University, Jagatpura", query: "Vivekananda Global University Jagatpura Jaipur" },
+  ],
   categories: [
-    { name: "Colleges & Coaching", detail: "~150+ colleges · ~3,000+ institutes", x: 28, y: 34 },
-    { name: "Government Hospitals", detail: "~15–20+ incl. SMS Hospital", x: 62, y: 28 },
-    { name: "Metro & Railway", detail: "11 metro + ~7 railway stations", x: 48, y: 58 },
-    { name: "Corporate Parks", detail: "~5–8 business hubs", x: 74, y: 64 },
-    { name: "Highway Petrol Stations", detail: "~80–100+ along highways", x: 20, y: 70 },
+    { name: "Colleges & Coaching", detail: "~150+ colleges · ~3,000+ institutes", query: "colleges and coaching institutes in Jaipur" },
+    { name: "Government Hospitals", detail: "~15–20+ incl. SMS Hospital", query: "government hospitals in Jaipur" },
+    { name: "Metro & Railway", detail: "11 metro + ~7 railway stations", query: "metro and railway stations in Jaipur" },
+    { name: "Corporate Parks", detail: "~5–8 business hubs", query: "corporate parks in Jaipur" },
+    { name: "Highway Petrol Stations", detail: "~80–100+ along highways", query: "highway petrol stations near Jaipur" },
   ],
 };
 

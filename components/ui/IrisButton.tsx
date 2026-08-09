@@ -9,6 +9,8 @@ type Props = {
   variant?: "iris" | "ghost" | "inverse";
   className?: string;
   pulse?: boolean;
+  target?: string;
+  rel?: string;
 };
 
 // Primary action button. "iris" = solid violet, "ghost" = hairline outline,
@@ -19,6 +21,8 @@ export default function IrisButton({
   variant = "iris",
   className = "",
   pulse = false,
+  target,
+  rel,
 }: Props) {
   const base =
     "group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-colors duration-300 will-change-transform";
@@ -29,6 +33,8 @@ export default function IrisButton({
     return (
       <motion.a
         href={href}
+        target={target}
+        rel={rel}
         className={`${base} border border-ink/15 bg-transparent text-ink hover:border-violet hover:text-violet ${className}`}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
@@ -43,6 +49,8 @@ export default function IrisButton({
     return (
       <motion.a
         href={href}
+        target={target}
+        rel={rel}
         className={`${base} bg-white text-ink shadow-[0_10px_40px_-10px_rgba(0,0,0,0.4)] hover:text-violet-deep ${className}`}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
@@ -63,6 +71,8 @@ export default function IrisButton({
   return (
     <motion.a
       href={href}
+      target={target}
+      rel={rel}
       className={`${base} bg-violet text-white shadow-[0_10px_36px_-10px_rgba(124,58,237,0.55)] hover:bg-violet-deep ${className}`}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}

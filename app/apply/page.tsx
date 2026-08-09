@@ -31,14 +31,24 @@ export default function ApplyPage() {
           <div className="mx-auto mt-12 max-w-[720px] overflow-hidden rounded-3xl border border-ink/10 bg-white p-2 sm:p-4">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSczqkId3GvxA-i_TuRwPQco2lnuJ6yaANtAkZxhGnhAuuLbsw/viewform?embedded=true"
-              width="640"
-              height="2541"
               title="Vendi 'N' Go investor application form"
-              className="w-full"
+              className="h-[75vh] min-h-[600px] w-full sm:h-[80vh]"
             >
               Loading…
             </iframe>
           </div>
+          <p className="mt-4 text-center text-xs text-ink-muted sm:hidden">
+            Form not scrolling smoothly?{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSczqkId3GvxA-i_TuRwPQco2lnuJ6yaANtAkZxhGnhAuuLbsw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-violet underline underline-offset-2"
+            >
+              Open it directly
+            </a>
+            .
+          </p>
         </section>
       </main>
       <Footer />

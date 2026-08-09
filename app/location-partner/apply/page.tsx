@@ -31,14 +31,24 @@ export default function PartnerApplyPage() {
           <div className="mx-auto mt-12 max-w-[720px] overflow-hidden rounded-3xl border border-ink/10 bg-white p-2 sm:p-4">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSebRNa6AVLr9d2Pzm6jlFslgfCP7eaQips6uYaSZqFy9yQFhg/viewform?embedded=true"
-              width="640"
-              height="2338"
               title="Vendi 'N' Go location partner application form"
-              className="w-full"
+              className="h-[75vh] min-h-[600px] w-full sm:h-[80vh]"
             >
               Loading…
             </iframe>
           </div>
+          <p className="mt-4 text-center text-xs text-ink-muted sm:hidden">
+            Form not scrolling smoothly?{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSebRNa6AVLr9d2Pzm6jlFslgfCP7eaQips6uYaSZqFy9yQFhg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-violet underline underline-offset-2"
+            >
+              Open it directly
+            </a>
+            .
+          </p>
         </section>
       </main>
       <Footer />

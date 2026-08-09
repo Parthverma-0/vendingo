@@ -1,4 +1,4 @@
-// File: D:\vendigo\app\apply\page.tsx
+// File: D:\Projects\Vendingo\vendingo\app\apply\page.tsx
 import * as entry from '../../../../app/apply/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

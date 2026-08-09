@@ -136,12 +136,17 @@ export const PARTNER_LOCATIONS = {
   heading: "Our machines work best where people already are.",
   body: "We prioritize **high-footfall, recurring-traffic locations** — the same categories already driving our Jaipur pilot.",
   cta: "Talk to Us",
+  mapEmbedSrc: "https://www.google.com/maps?q=Jaipur,Rajasthan&z=11&output=embed",
+  live: [
+    { name: "GCEC", query: "GCEC Jaipur" },
+    { name: "VGU — Vivekananda Global University, Jagatpura", query: "Vivekananda Global University Jagatpura Jaipur" },
+  ],
   categories: [
-    { name: "Colleges & Coaching", detail: "High daily density, long dwell time", x: 28, y: 34 },
-    { name: "Government Hospitals", detail: "Constant footfall, 24×7 need", x: 62, y: 28 },
-    { name: "Metro & Railway", detail: "High transient volume", x: 48, y: 58 },
-    { name: "Corporate Parks", detail: "Predictable daily traffic", x: 74, y: 64 },
-    { name: "Residential Societies", detail: "Repeat, loyal users", x: 20, y: 70 },
+    { name: "Colleges & Coaching", detail: "High daily density, long dwell time", query: "colleges and coaching institutes in Jaipur" },
+    { name: "Government Hospitals", detail: "Constant footfall, 24×7 need", query: "government hospitals in Jaipur" },
+    { name: "Metro & Railway", detail: "High transient volume", query: "metro and railway stations in Jaipur" },
+    { name: "Corporate Parks", detail: "Predictable daily traffic", query: "corporate parks in Jaipur" },
+    { name: "Residential Societies", detail: "Repeat, loyal users", query: "residential societies in Jaipur" },
   ],
   types: [
     "Corporate Offices & IT Parks",

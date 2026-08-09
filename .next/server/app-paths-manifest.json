@@ -1,5 +1,7 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/location-partner/apply/page": "app/location-partner/apply/page.js",
   "/apply/page": "app/apply/page.js",
   "/location-partner/page": "app/location-partner/page.js"
 }

@@ -37,7 +37,7 @@ const floatCards = [
   },
   {
     label: "Target return p.a.",
-    value: "13.7%",
+    value: "54.8%",
     sub: "projected",
     pos: "right-4 top-[44%] sm:-right-8",
     delay: 1.2,

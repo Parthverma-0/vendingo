@@ -73,13 +73,13 @@ export default function PartnerTransparency() {
   const share = Math.round(revenue / 10);
 
   return (
-    <section id="partner-transparency" ref={ref} className="relative h-[180vh]">
+    <section id="partner-transparency" ref={ref} className="relative lg:h-[180vh]">
       <motion.div
         style={{ opacity: sectionOpacity }}
-        className="sticky top-0 flex min-h-screen items-center overflow-hidden bg-night px-5 py-20 sm:px-8"
+        className="flex items-center bg-night px-5 py-16 sm:px-8 lg:sticky lg:top-0 lg:min-h-screen lg:overflow-hidden lg:py-20"
       >
         {/* faint violet bloom in the dark */}
-        <div className="pointer-events-none absolute inset-0">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute left-1/2 top-0 h-[50vw] w-[70vw] -translate-x-1/2 rounded-full bg-violet/10 blur-[120px]" />
         </div>
 
