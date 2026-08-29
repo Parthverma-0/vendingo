@@ -6,7 +6,7 @@ import Section from "../ui/Section";
 import SectionHeading from "../ui/SectionHeading";
 
 // Light-background version of the Transparency checklist: six operational
-// reasons organizations pick Vendi 'N' Go.
+// reasons organizations pick Vendingo.
 export default function PartnerWhyUs() {
   return (
     <div className="hairline-t bg-paper">

@@ -28,7 +28,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-          <a href="/#hero" aria-label="Vendi 'N' Go home">
+          <a href="/#hero" aria-label="Vendingo home">
             <Logo />
           </a>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <IrisButton href="/apply" className="px-5 py-2.5 text-[13px]">
-              Start Investing
+              Explore the Opportunity
             </IrisButton>
           </div>
 
@@ -128,9 +128,12 @@ export default function Navbar() {
                 ))}
               </motion.ul>
 
-              <div className="mt-auto">
+              <div className="mt-auto flex flex-col gap-3">
                 <IrisButton href="/apply" className="w-full" pulse>
-                  Start Investing
+                  Explore the Opportunity
+                </IrisButton>
+                <IrisButton href="/location-partner" variant="ghost" className="w-full">
+                  Partner Your Location
                 </IrisButton>
               </div>
             </motion.div>

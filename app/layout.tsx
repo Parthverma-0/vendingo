@@ -21,22 +21,22 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vendi 'N' Go — India's Fintech Vending Investment Platform",
+  title: "Vendingo — Vending Machine Business in India | Smart Vending",
   description:
-    "Fund a smart, IoT-connected vending machine. Earn transparent, monthly passive income — tracked in real time. Jaipur pilot now open to founding investors.",
+    "Vendingo is building a smart vending network in India with IoT-enabled machines, digital payments, real-time monitoring and managed operations across high-footfall locations.",
   keywords: [
-    "Vendi 'N' Go",
+    "Vendingo",
+    "vending machine business in India",
+    "smart vending machines India",
+    "IoT vending machines",
+    "automated retail India",
     "vending machine investment",
-    "passive income India",
-    "IoT vending",
-    "Jaipur fintech",
-    "automated retail investment",
   ],
-  authors: [{ name: "Vendi 'N' Go" }],
+  authors: [{ name: "Vendingo" }],
   openGraph: {
-    title: "Vendi 'N' Go — Own the machine. Earn the income.",
+    title: "Vendingo — Smart Vending. Built for Real-World Retail.",
     description:
-      "Fund a smart, IoT-connected vending machine. Earn transparent, monthly passive income — tracked in real time.",
+      "Vendingo is building a technology-enabled vending network across high-footfall locations in India — IoT-enabled machines, digital payments, real-time monitoring and managed operations.",
     type: "website",
     locale: "en_IN",
   },

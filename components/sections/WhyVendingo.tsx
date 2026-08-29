@@ -22,7 +22,7 @@ export default function WhyVendingo() {
   return (
     <div className="hairline-t bg-paper">
       <Section id="why">
-        <SectionHeading eyebrow="Why Vendi 'N' Go" title={WHY.heading} />
+        <SectionHeading eyebrow="Why Vendingo" title={WHY.heading} />
 
         <motion.div
           initial="hidden"

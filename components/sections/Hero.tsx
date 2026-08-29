@@ -29,7 +29,7 @@ const word = {
 const floatCards = [
   {
     label: "Your share, monthly",
-    value: "₹13,700",
+    value: "₹8,640",
     sub: "projected",
     pos: "left-4 top-6 sm:-left-8 sm:top-10",
     delay: 1.0,
@@ -37,7 +37,7 @@ const floatCards = [
   },
   {
     label: "Target return p.a.",
-    value: "54.8%",
+    value: "34.6%",
     sub: "projected",
     pos: "right-4 top-[44%] sm:-right-8",
     delay: 1.2,
@@ -99,7 +99,7 @@ export default function Hero() {
               className="block [perspective:900px]"
             >
               {titleWords.map((w, i) => {
-                const accent = /income/i.test(w);
+                const accent = /vending/i.test(w);
                 return (
                   <motion.span
                     key={i}
@@ -173,7 +173,7 @@ export default function Hero() {
             <div className="absolute inset-0 animate-float-bob will-change-transform">
               <Image
                 src="/vending-machine.png"
-                alt="Vendi 'N' Go IoT-connected vending machine"
+                alt="Vendingo IoT-connected vending machine"
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 40vw"

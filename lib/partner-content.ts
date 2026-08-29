@@ -1,30 +1,30 @@
 // Single source of truth for all Location Partner page copy.
 // Mirrors the structure of lib/content.ts (investor page).
 //
-// NOTE: The handoff doc left projected figures as "₹0" placeholders. Until the
-// team confirms real numbers, projected values here are derived from the
-// investor page's ₹1,00,000 avg gross/machine (10% share = ₹10,000/mo) and
-// every one of them carries a "Projected" tag. Update in this file only.
+// Per the submitted location-partner proposal: zero upfront investment,
+// Vendingo funds/installs/operates the machine, and the location partner
+// receives 10% of monthly sales plus ₹2,000/month toward electricity
+// (the partner's premises supplies the power; Vendingo reimburses it monthly).
 
 export const PARTNER_HERO = {
   eyebrow: "Location Partner Program",
   title: "Your space. Our machine. Your monthly share.",
   subtitle:
-    "Host a Vendi 'N' Go smart vending machine at your premises — with **zero investment, zero electricity cost, and zero operational work**. In return, you earn a transparent **10% share of every month's sales**, tracked live from day one.",
+    "Host a Vendingo smart vending machine at your premises — with **zero investment and zero operational work**. In return, you earn a transparent **10% share of every month's sales**, plus a fixed monthly electricity reimbursement, tracked live from day one.",
   primaryCta: "Become a Location Partner",
   secondaryCta: "See how the revenue share works",
-  chips: ["NO SETUP COST", "NO ELECTRICITY BILL", "MONTHLY UPI PAYOUTS", "LIVE IOT TRACKING"],
+  chips: ["NO SETUP COST", "ELECTRICITY REIMBURSED", "MONTHLY UPI PAYOUTS", "LIVE IOT TRACKING"],
 };
 
 export const PARTNER_OPPORTUNITY = {
   heading: "Turn unused footfall into a recurring income line.",
-  body: "Every day, people pass through your space — students, employees, patients, visitors, residents — and every one of them is a potential vending sale. Right now, that footfall earns your organization nothing. A Vendi 'N' Go machine turns it into a **line item on your monthly income statement**, without asking your team to lift a finger.",
+  body: "Every day, people pass through your space — students, employees, patients, visitors, residents — and every one of them is a potential vending sale. Right now, that footfall earns your organization nothing. A Vendingo machine turns it into a **line item on your monthly income statement**, without asking your team to lift a finger.",
   footfallStat: {
     value: 200,
     suffix: "+",
     label:
       "daily visitors — most institutions at that footfall have never converted it into revenue, because doing it yourself means capital, staff, and maintenance overhead.",
-    bottomLine: "Vendi 'N' Go removes all three. You provide the space — we split the upside with you, every month.",
+    bottomLine: "Vendingo removes all three. You provide the space — we split the upside with you, every month.",
   },
   split: {
     label: "Who brings what",
@@ -52,7 +52,7 @@ export const PARTNER_TRANSPARENCY = {
 export const PARTNER_SHARE = {
   heading: "Real numbers. Honestly framed.",
   intro:
-    "Here's what a single machine is projected to generate at a mid-footfall location in our Jaipur pilot.",
+    "Here's what a single machine is projected to generate at a mid-footfall location, per the submitted location-partner proposal.",
   figures: [
     {
       value: 100000,
@@ -61,7 +61,7 @@ export const PARTNER_SHARE = {
       tag: "Projected",
     },
     { value: 10000, prefix: "₹", label: "your monthly share (10%)", tag: "Projected" },
-    { value: 0, prefix: "₹", label: "cost to your organization", tag: "Always" },
+    { value: 2000, prefix: "₹", label: "monthly electricity reimbursement", tag: "Fixed" },
   ],
   flow: [
     { label: "The Machine", note: "Sells to your own footfall, every day" },
@@ -69,21 +69,21 @@ export const PARTNER_SHARE = {
     { label: "Your Payout", note: "Direct to your account, every month" },
   ],
   ownLine:
-    "**You host the machine.** We handle stocking, servicing, electricity, and logistics — entirely at our cost.",
+    "**You host the machine.** We handle stocking, servicing, and logistics — Vendingo also reimburses ₹2,000/month toward the electricity it draws.",
   disclaimer:
-    "Figures are projected and vary by footfall, location type, and product mix. Actual revenue share is confirmed after site evaluation.",
+    "Figures are projected and vary by footfall, location type, and product mix. Actual revenue share is confirmed after site evaluation — not a guaranteed return.",
 };
 
 export const PARTNER_BENEFITS = {
-  heading: "Everything you gain. Nothing you manage.",
+  heading: "Everything you gain. Very little you manage.",
   cards: [
     {
       title: "Zero Investment",
-      body: "You don't purchase the machine or pay for installation. **Vendi 'N' Go funds and installs the entire setup.**",
+      body: "You don't purchase the machine or pay for installation. **Vendingo funds and installs the entire setup.**",
     },
     {
-      title: "Zero Electricity Cost",
-      body: "We cover the machine's power consumption **in full**. Your electricity bill doesn't change.",
+      title: "Electricity Reimbursed",
+      body: "The machine draws power from your premises. Vendingo reimburses **₹2,000 every month** toward that cost.",
     },
     {
       title: "10% Monthly Revenue Share",
@@ -118,17 +118,17 @@ export const PARTNER_STEPS = [
   {
     n: "03",
     title: "Agreement",
-    body: "We finalize a simple partnership agreement covering placement, revenue share, and terms.",
+    body: "We finalize a simple partnership agreement covering placement, revenue share, electricity reimbursement, and terms.",
   },
   {
     n: "04",
     title: "Installation",
-    body: "We install the machine at no cost to you and bring it fully online.",
+    body: "We install the machine at no upfront cost to you and bring it fully online.",
   },
   {
     n: "05",
     title: "Earn Every Month",
-    body: "Track sales live on your dashboard and receive your 10% share every month via direct payout.",
+    body: "Track sales live on your dashboard and receive your 10% share plus electricity reimbursement every month via direct payout.",
   },
 ];
 
@@ -178,32 +178,32 @@ export const PARTNER_WHY_US = {
 };
 
 export const PARTNER_BANNER = {
-  heading: "Start earning. Without spending anything.",
+  heading: "Start earning. Without funding anything.",
   stats: [
     { value: "₹0", label: "Investment" },
-    { value: "₹0", label: "Electricity Cost" },
+    { value: "₹2,000/mo", label: "Electricity Reimbursed" },
     { value: "10%", label: "Monthly Revenue Share" },
   ],
   body: "Turn unused space into a valued amenity for your people, and a transparent, recurring income line for your organization — **tracked live, paid every month**.",
 };
 
 export const PARTNER_TESTIMONIALS = {
-  heading: "What our pilot partners expect.",
-  tag: "Illustrative — pilot projections",
+  heading: "What early Vendingo location partnership could look like.",
+  tag: "Illustrative example — not a real customer testimonial",
   items: [
     {
       quote:
-        "We had a corner of our lobby doing nothing. Now it's on the dashboard earning us a share every month, and we didn't spend a rupee setting it up.",
-      name: "Anita D.",
-      place: "Facilities Head · Corporate Park, Jaipur",
-      amount: "₹9,600/mo",
+        "This is an illustrative example of a facilities head's perspective: we had a corner of our lobby doing nothing. Now it's on the dashboard earning us a share every month, and we didn't spend a rupee setting it up.",
+      name: "Illustrative Facilities Head",
+      place: "Corporate park, Jaipur · example scenario",
+      amount: "₹10,000/mo",
     },
     {
       quote:
-        "Our students get snacks and drinks on campus now, and the college gets a monthly payout for space we weren't using anyway. Easy decision.",
-      name: "Prakash M.",
-      place: "Admin Office · Engineering College, Jaipur",
-      amount: "₹8,400/mo",
+        "This is an illustrative example of a college admin office's perspective: our students get snacks and drinks on campus now, and the college gets a monthly payout plus electricity reimbursement for space we weren't using anyway.",
+      name: "Illustrative Admin Office",
+      place: "Engineering college, Jaipur · example scenario",
+      amount: "₹9,200/mo",
     },
   ],
 };
@@ -211,15 +211,19 @@ export const PARTNER_TESTIMONIALS = {
 export const PARTNER_FAQ = [
   {
     q: "Do we have to pay for the vending machine?",
-    a: "No. Vendi 'N' Go funds, installs, and owns the machine. Your organization provides only the space.",
+    a: "No. Vendingo funds, installs, and owns the machine. Your organization provides only the space.",
   },
   {
     q: "Will we be billed for the machine's electricity?",
-    a: "No. We cover 100% of the machine's power consumption — your utility bill is unaffected.",
+    a: "The machine draws power from your premises electricity connection, but Vendingo reimburses ₹2,000 every month toward that cost as part of the partnership agreement.",
   },
   {
     q: "How exactly do we earn revenue?",
-    a: "Your organization receives 10% of the machine's gross monthly sales, visible live on your dashboard and paid out on a fixed monthly schedule.",
+    a: "Your organization receives 10% of the machine's gross monthly sales, visible live on your dashboard, plus the ₹2,000/month electricity reimbursement — both paid out on a fixed monthly schedule.",
+  },
+  {
+    q: "What does a location partner receive?",
+    a: "Per the submitted proposal: 10% of monthly sales plus ₹2,000/month toward electricity, subject to the applicable commercial agreement.",
   },
   {
     q: "Who restocks the machine?",
@@ -227,7 +231,7 @@ export const PARTNER_FAQ = [
   },
   {
     q: "Who's responsible for repairs and maintenance?",
-    a: "Vendi 'N' Go handles all servicing, repairs, software updates, and preventive maintenance at no cost to you.",
+    a: "Vendingo handles all servicing, repairs, software updates, and preventive maintenance at no cost to you.",
   },
   {
     q: "What does our organization actually need to do?",
@@ -235,13 +239,13 @@ export const PARTNER_FAQ = [
   },
   {
     q: "Is the revenue share negotiable or does it change?",
-    a: "The 10% share is fixed and confirmed in your partnership agreement after site evaluation, so there are no surprises month to month.",
+    a: "The 10% share and ₹2,000/month electricity reimbursement are fixed and confirmed in your partnership agreement after site evaluation, so there are no surprises month to month.",
   },
 ];
 
 export const PARTNER_FINAL_CTA = {
   heading: "Your space could be earning right now.",
   body: "Join our founding location partners. **Limited installation slots** in the current pilot phase.",
-  cta: "Claim Your Location Slot",
+  cta: "Partner Your Location",
   sub: "No obligation. Our team will get in touch **within 24 hours** of your application.",
 };

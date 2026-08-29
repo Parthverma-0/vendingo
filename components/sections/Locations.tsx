@@ -29,7 +29,7 @@ export default function Locations() {
               className="absolute inset-0 h-full w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Vendi 'N' Go Jaipur pilot zone map"
+              title="Vendingo Jaipur pilot zone map"
             />
             <span className="eyebrow pointer-events-none absolute left-4 top-4 rounded-full border border-ink/10 bg-white px-3 py-1">
               Jaipur · Pilot Zone
@@ -90,7 +90,7 @@ export default function Locations() {
 
             <Reveal delay={0.2} className="mt-2">
               <IrisButton
-                href={WHATSAPP_LINK("Hi! I'd like to talk about Vendi 'N' Go.")}
+                href={WHATSAPP_LINK("Hi! I'd like to talk about Vendingo.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"

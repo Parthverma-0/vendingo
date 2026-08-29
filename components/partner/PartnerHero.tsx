@@ -173,7 +173,7 @@ export default function PartnerHero() {
             <div className="absolute inset-0 animate-float-bob will-change-transform">
               <Image
                 src="/vending-machine.png"
-                alt="Vendi 'N' Go IoT-connected vending machine at a partner location"
+                alt="Vendingo IoT-connected vending machine at a partner location"
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 40vw"

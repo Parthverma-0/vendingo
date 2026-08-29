@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Become an Investor — Vendi 'N' Go",
+  title: "Become an Investor — Vendingo",
   description:
-    "Apply for a founding investor slot in the Vendi 'N' Go Jaipur pilot. Fill in the form and our team will get in touch within 24 hours.",
+    "Apply for a founding investor slot in the Vendingo Jaipur pilot. Fill in the form and our team will get in touch within 24 hours.",
 };
 
 export default function ApplyPage() {
@@ -31,7 +31,7 @@ export default function ApplyPage() {
           <div className="mx-auto mt-12 max-w-[720px] overflow-hidden rounded-3xl border border-ink/10 bg-white p-2 sm:p-4">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSczqkId3GvxA-i_TuRwPQco2lnuJ6yaANtAkZxhGnhAuuLbsw/viewform?embedded=true"
-              title="Vendi 'N' Go investor application form"
+              title="Vendingo investor application form"
               className="h-[75vh] min-h-[600px] w-full sm:h-[80vh]"
             >
               Loading…

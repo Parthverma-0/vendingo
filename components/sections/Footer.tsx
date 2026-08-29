@@ -29,10 +29,10 @@ export default function Footer() {
           <motion.div variants={col}>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
-              Vendi &apos;N&apos; Go — {FOOTER.tagline}
+              Vendingo — {FOOTER.tagline}
             </p>
             <p className="mt-5 font-mono text-[11px] text-ink-faint">
-              © {new Date().getFullYear()} Vendi &apos;N&apos; Go. All rights reserved.
+              © {new Date().getFullYear()} Vendingo. All rights reserved.
             </p>
           </motion.div>
 

@@ -1,28 +1,28 @@
 // Single source of truth for all landing-page copy.
-// Brand name is always "Vendi 'N' Go".
+// Brand name is "Vendingo".
 
-export const BRAND = "Vendi 'N' Go";
+export const BRAND = "Vendingo";
 
 // "/#section" form so the links also work from pages other than the home page.
 export const NAV_LINKS = [
   { label: "Opportunity", href: "/#opportunity" },
   { label: "Transparency", href: "/#transparency" },
-  { label: "Returns", href: "/#returns" },
+  { label: "Economics", href: "/#returns" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Why Us", href: "/#why" },
+  { label: "Why Vendingo", href: "/#why" },
   { label: "Locations", href: "/#locations" },
   { label: "FAQ", href: "/#faq" },
   { label: "Partner With Us", href: "/location-partner" },
 ];
 
 export const HERO = {
-  eyebrow: "India's Fintech Vending Investment Platform",
-  title: "Own the machine. Earn the income.",
+  eyebrow: "Smart Vending Network · India",
+  title: "Smart vending. Built for real-world retail.",
   subtitle:
-    "Fund a smart, IoT-connected vending machine. Earn **transparent, monthly passive income** — tracked in real time.",
-  primaryCta: "Start Investing",
-  secondaryCta: "See how returns work",
-  chips: ["UPI PAYOUTS", "LIVE IOT TRACKING", "GST COMPLIANT"],
+    "Vendingo is building a technology-enabled vending network across high-footfall locations in India — combining **IoT-enabled machines**, digital payments, real-time monitoring and managed operations.",
+  primaryCta: "Explore the Opportunity",
+  secondaryCta: "Partner Your Location",
+  chips: ["IOT-ENABLED", "UPI PAYMENTS", "MANAGED OPERATIONS"],
 };
 
 export const OPPORTUNITY = {
@@ -50,55 +50,56 @@ export const TRANSPARENCY = {
 
 export const RETURNS = {
   heading: "Real numbers. Honestly framed.",
-  intro: "Here's what a single machine is projected to do in our Jaipur pilot.",
+  intro: "Here's what a single machine is projected to do under Vendingo's submitted investor model.",
   figures: [
-    { value: 100000, prefix: "₹", label: "avg. monthly gross revenue / machine", sub: "projected" },
-    { value: 13700, prefix: "₹", label: "your share, every month", sub: "projected" },
-    { value: 54.8, suffix: "% p.a.", label: "target return on ~₹3L invested", sub: "projected", decimals: 1 },
+    { value: 8640, prefix: "₹", label: "projected monthly investor share", sub: "projected" },
+    { value: 103680, prefix: "₹", label: "projected annual investor share", sub: "projected" },
+    { value: 34.6, suffix: "% p.a.", label: "projected annual return on ₹3,00,000 invested", sub: "projected", decimals: 1 },
   ],
   ownLine: "**You own the asset.** We handle restocking, servicing, and logistics.",
   flow: [
     { label: "The Asset", note: "Your machine earns" },
-    { label: "Your Share", note: "Profit split, transparent" },
-    { label: "Your Account", note: "Monthly UPI payout" },
+    { label: "Your Share", note: "60% of the revenue split, transparent" },
+    { label: "Your Account", note: "Monthly payout" },
   ],
   tagline:
-    "Vendi 'N' Go. One machine, one investor, one transparent payout at a time.",
+    "Vendingo. One machine, one investor, one transparent payout at a time.",
   founders:
-    "Founding investors get a **preferential 65% profit share**. Limited Jaipur pilot slots.",
-  disclaimer: "Projected. Investments are subject to market risk.",
+    "The submitted model allocates **60% of the revenue split to the investor**, 10% to the location partner, and 30% to Vendingo operations.",
+  disclaimer:
+    "Illustrative/projected economics based on the assumptions stated in the Vendingo investor document. Actual performance may vary — not a guaranteed return. Approximately 35-month projected payback.",
 };
 
 export const STEPS = [
   {
     n: "01",
-    title: "Sign Up & KYC",
-    body: "Create your account and complete a quick, secure KYC verification.",
+    title: "Identify the Location",
+    body: "We assess the site, footfall and suitability for vending.",
   },
   {
     n: "02",
-    title: "Choose Machine",
-    body: "Pick a machine and a high-footfall Jaipur location that fits your budget.",
+    title: "Sign Up & Deploy",
+    body: "Complete a quick KYC and review your investor agreement. The machine is delivered, installed and commissioned.",
   },
   {
     n: "03",
-    title: "E-Sign Docs",
-    body: "Review and e-sign your ownership and investor agreement digitally.",
+    title: "Fund & Activate",
+    body: "Fund your machine. We stock it and bring it online.",
   },
   {
     n: "04",
-    title: "Fund & Activate",
-    body: "Fund your machine. We deploy, stock, and bring it online.",
+    title: "Operate & Monitor",
+    body: "Vendingo manages the operating layer, including monitoring, inventory and servicing.",
   },
   {
     n: "05",
-    title: "Earn Every Month",
-    body: "Watch sales live and receive your transparent payout every month.",
+    title: "Track the Economics",
+    body: "Watch sales live and receive your transparent, projected monthly share.",
   },
 ];
 
 export const WHY = {
-  heading: "Real assets. Real returns. Real transparency.",
+  heading: "Real assets. Real transparency. A defined operating model.",
   pillars: [
     {
       title: "Real Asset Backing",
@@ -112,13 +113,13 @@ export const WHY = {
     },
     {
       title: "Start Small",
-      body: "Enter automated retail from **~₹3L** — no operator scale or storefront required.",
+      body: "Enter automated retail from **₹3,00,000** — no operator scale or storefront required.",
       span: "sm",
     },
     {
-      title: "50% recovered in first year",
-      body: "Our target: return roughly **half of your invested amount** within the first year of operation.",
-      sub: "Target / projection",
+      title: "Managed operations, not guesswork",
+      body: "IoT monitoring, digital payments and managed restocking are **built into every machine**, so performance is measured, not assumed.",
+      sub: "Operating model",
       span: "lg",
     },
   ],
@@ -138,37 +139,37 @@ export const LOCATIONS = {
     { name: "VGU — Vivekananda Global University, Jagatpura", query: "Vivekananda Global University Jagatpura Jaipur" },
   ],
   categories: [
-    { name: "Colleges & Coaching", detail: "~150+ colleges · ~3,000+ institutes", query: "colleges and coaching institutes in Jaipur" },
-    { name: "Government Hospitals", detail: "~15–20+ incl. SMS Hospital", query: "government hospitals in Jaipur" },
-    { name: "Metro & Railway", detail: "11 metro + ~7 railway stations", query: "metro and railway stations in Jaipur" },
-    { name: "Corporate Parks", detail: "~5–8 business hubs", query: "corporate parks in Jaipur" },
-    { name: "Highway Petrol Stations", detail: "~80–100+ along highways", query: "highway petrol stations near Jaipur" },
+    { name: "Colleges & Universities", detail: "~150+ colleges · ~3,000+ institutes", query: "colleges and coaching institutes in Jaipur" },
+    { name: "Government Hospitals & Clinics", detail: "~15–20+ incl. SMS Hospital", query: "government hospitals in Jaipur" },
+    { name: "Metro, Railway & Transit", detail: "11 metro + ~7 railway stations", query: "metro and railway stations in Jaipur" },
+    { name: "Corporate Offices", detail: "~5–8 business hubs", query: "corporate parks in Jaipur" },
+    { name: "Hostels, PGs & Highway Stops", detail: "~80–100+ along highways", query: "highway petrol stations near Jaipur" },
   ],
 };
 
 export const TESTIMONIALS = {
-  heading: "What our pilot investors expect.",
-  tag: "Illustrative — pilot projections",
+  heading: "What early Vendingo participation could look like.",
+  tag: "Illustrative example — not a real customer testimonial",
   items: [
     {
       quote:
-        "I wanted my savings to do something real, not just sit in a bank. Owning a machine at SMS Medical College felt tangible — and I can watch every sale live.",
-      name: "Ravi S.",
-      place: "Jaipur · SMS Medical College",
-      amount: "₹9,400/mo",
+        "This is an illustrative example of how an investor might frame the decision: I wanted my savings to do something real, not just sit in a bank. Owning a machine at a high-footfall location felt tangible — and I can watch every sale live.",
+      name: "Illustrative Investor",
+      place: "Jaipur pilot · example scenario",
+      amount: "₹8,640/mo",
     },
     {
       quote:
-        "The transparency sold me. A machine at Jodhpur Railway Station, payouts every month, and a dashboard that never lies. That's the kind of passive income I trust.",
-      name: "Meena R.",
-      place: "Jodhpur · Jodhpur Railway Station",
-      amount: "₹9,900/mo",
+        "This is an illustrative example of a location partner's perspective: the transparency sold me. A machine on-site, monthly payouts, and a dashboard that never lies. That's the kind of revenue-sharing I trust.",
+      name: "Illustrative Location Partner",
+      place: "Jaipur pilot · example scenario",
+      amount: "₹10,000/mo",
     },
   ],
 };
 
 export const NUMBERS = {
-  heading: "Vendi 'N' Go in Numbers",
+  heading: "Vendingo in Numbers",
   badge: "First-phase goals — not live traction",
   note: "Goals for our first phase — not live traction. We'll publish real numbers as machines go live.",
   stats: [
@@ -181,12 +182,16 @@ export const NUMBERS = {
 
 export const FAQ = [
   {
+    q: "Is Vendingo a vending machine company?",
+    a: "Vendingo operates a technology-enabled vending model built around IoT-enabled machines, digital payments, remote monitoring and managed operations.",
+  },
+  {
     q: "Do I actually own the vending machine?",
     a: "Yes. Every investment is linked to a specific vending machine. You'll receive documentation confirming your ownership, while Vendingo manages installation, stocking, maintenance, and day-to-day operations on your behalf.",
   },
   {
     q: "How do I earn money?",
-    a: "Each vending machine generates revenue through product sales. After deducting operational expenses such as inventory, maintenance, and location costs, profits are distributed according to your ownership agreement.",
+    a: "Each vending machine generates revenue through product sales. The submitted investor document presents a projected revenue split of 60% to the investor, 10% to the location partner, and 30% to Vendingo operations, after which profits are distributed according to your ownership agreement.",
   },
   {
     q: "Can I track my machine in real time?",
@@ -194,19 +199,19 @@ export const FAQ = [
   },
   {
     q: "Who handles maintenance and restocking?",
-    a: "Vendingo takes care of everything—from refilling products and routine maintenance to technical support and repairs. You don't need to visit or manage the machine yourself.",
+    a: "Vendingo takes care of everything — from refilling products and routine maintenance to technical support and repairs. You don't need to visit or manage the machine yourself.",
   },
   {
     q: "What happens if my machine stops working?",
     a: "Our operations team is notified automatically through our monitoring system. We work to restore the machine as quickly as possible to minimize downtime and protect your earnings.",
   },
   {
-    q: "Is my investment guaranteed?",
-    a: "No investment can guarantee returns. Revenue depends on factors such as location performance, customer demand, and operational costs. We focus on maximizing performance through careful location selection and active management.",
+    q: "Does Vendingo guarantee returns?",
+    a: "No. No investment can guarantee returns. The submitted investor document explicitly describes its figures — including the 34.6% projected annual return — as an operating projection based on stated assumptions, not a guaranteed return. Revenue depends on factors such as location performance, customer demand, and operational costs.",
   },
   {
     q: "Where will my vending machine be installed?",
-    a: "Machines are placed in carefully selected high-footfall locations such as offices, colleges, hospitals, malls, residential communities, and commercial spaces after evaluating demand and accessibility.",
+    a: "Machines are placed in carefully selected high-footfall locations such as colleges, corporate offices, hostels, hospitals, gyms, malls and transit hubs, after evaluating demand and accessibility.",
   },
   {
     q: "Can I choose the location of my machine?",
@@ -214,15 +219,11 @@ export const FAQ = [
   },
   {
     q: "What products are sold in the machines?",
-    a: "Our machines offer a curated selection of snacks, beverages, and everyday convenience products. Product mixes are continuously optimized based on customer demand and sales data.",
+    a: "Our machines offer a curated selection of snacks, beverages, and everyday essentials. Product mixes are continuously optimized based on customer demand and sales data.",
   },
   {
     q: "What if a location performs poorly?",
     a: "We regularly analyze machine performance. If a location consistently underperforms, we'll evaluate relocating the machine to a better-performing site whenever feasible.",
-  },
-  {
-    q: "Are the machines insured?",
-    a: "We work to protect our assets through appropriate operational safeguards. Insurance coverage, where applicable, will be clearly outlined in your investment agreement.",
   },
   {
     q: "How often will I receive earnings?",
@@ -230,19 +231,15 @@ export const FAQ = [
   },
   {
     q: "Is there a minimum investment?",
-    a: "The minimum investment amount depends on the ownership model available during the current funding round. You'll always see the required investment before committing.",
+    a: "The submitted single-machine model is built around a ₹3,00,000 investment. You'll always see the required investment before committing.",
+  },
+  {
+    q: "Can I become a location partner without purchasing a machine?",
+    a: "Yes. The submitted location-partner proposal presents a zero-investment model in which Vendingo funds, installs and operates the machine — the location partner provides suitable space and receives 10% of monthly sales plus ₹2,000/month toward electricity.",
   },
   {
     q: "What makes Vendingo different from buying a vending machine myself?",
     a: "Buying a machine yourself means handling location acquisition, stocking, maintenance, repairs, customer support, and operations. With Vendingo, you own the asset while we manage the entire operational lifecycle.",
-  },
-  {
-    q: "How transparent is the platform?",
-    a: "Transparency is at the core of Vendingo. Investors receive access to performance metrics, earnings reports, operational updates, and machine status through a centralized dashboard.",
-  },
-  {
-    q: "What happens if I want to exit my investment?",
-    a: "Exit options depend on the investment agreement and ownership model. We'll provide clear terms regarding transfers, buybacks, or other exit mechanisms before you invest.",
   },
   {
     q: "How is investor data kept secure?",
@@ -255,18 +252,18 @@ export const FAQ = [
 ];
 
 export const FINAL_CTA = {
-  heading: "Your machine could be earning right now.",
-  body: "Join the founding investors. **Limited machine slots** in the first phase.",
-  cta: "Claim Your Machine Slot",
+  heading: "Interested in the Vendingo model?",
+  body: "Review the model, assumptions and applicable terms before proceeding. **Limited machine slots** in the first phase.",
+  cta: "Explore the Opportunity",
   sub: "We'll get in touch **within 24 hours**.",
 };
 
 export const FOOTER = {
-  tagline: "India's Fintech Vending Investment Platform",
+  tagline: "A technology-enabled smart vending network across India.",
   quickLinks: [
     { label: "Home", href: "/#hero" },
     { label: "How It Works", href: "/#how-it-works" },
-    { label: "Why Vendi 'N' Go", href: "/#why" },
+    { label: "Why Vendingo", href: "/#why" },
     { label: "Locations", href: "/#locations" },
     { label: "FAQ", href: "/#faq" },
     { label: "Become an Investor", href: "/apply" },
@@ -279,6 +276,6 @@ export const FOOTER = {
     "Jaipur, India",
   ],
   disclaimer:
-    "Investments are subject to market risks. Please read all investor documents carefully before investing.",
+    "Illustrative/projected economics based on the assumptions stated in the Vendingo investor and location-partner documents. Actual performance may vary. Investments are subject to market risks — please read all investor documents carefully before investing.",
   legal: ["Privacy", "Terms", "Investor Agreement"],
 };

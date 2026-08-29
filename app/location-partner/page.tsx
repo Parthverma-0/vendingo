@@ -22,9 +22,9 @@ import {
 } from "@/lib/partner-content";
 
 export const metadata: Metadata = {
-  title: "Location Partner Program — Vendi 'N' Go",
+  title: "Location Partner Program — Vendingo",
   description:
-    "Host a Vendi 'N' Go smart vending machine at your premises — zero investment, zero electricity cost, and a transparent 10% monthly revenue share, tracked live.",
+    "Host a Vendingo smart vending machine at your premises — zero investment, electricity reimbursed, and a transparent 10% monthly revenue share, tracked live.",
 };
 
 export default function LocationPartnerPage() {

@@ -23,7 +23,7 @@ export default function Logo({
           dark ? "text-white" : "text-ink"
         }`}
       >
-        Vendi <span className="text-violet">&apos;N&apos;</span> Go
+        Vend<span className="text-violet">ingo</span>
       </span>
     </span>
   );

@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Become a Location Partner — Vendi 'N' Go",
+  title: "Become a Location Partner — Vendingo",
   description:
-    "Apply to host a Vendi 'N' Go smart vending machine at your premises. Fill in the form and our team will get in touch within 24 hours.",
+    "Apply to host a Vendingo smart vending machine at your premises. Fill in the form and our team will get in touch within 24 hours.",
 };
 
 export default function PartnerApplyPage() {
@@ -31,7 +31,7 @@ export default function PartnerApplyPage() {
           <div className="mx-auto mt-12 max-w-[720px] overflow-hidden rounded-3xl border border-ink/10 bg-white p-2 sm:p-4">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSebRNa6AVLr9d2Pzm6jlFslgfCP7eaQips6uYaSZqFy9yQFhg/viewform?embedded=true"
-              title="Vendi 'N' Go location partner application form"
+              title="Vendingo location partner application form"
               className="h-[75vh] min-h-[600px] w-full sm:h-[80vh]"
             >
               Loading…

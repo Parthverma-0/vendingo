@@ -6,7 +6,7 @@ import { em } from "@/lib/em";
 import Section from "../ui/Section";
 import SectionHeading from "../ui/SectionHeading";
 
-// Same assembling-grid treatment as the investor "Why Vendi 'N' Go" bento —
+// Same assembling-grid treatment as the investor "Why Vendingo" bento —
 // six equal cards, with the revenue-share card getting the solid violet look.
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.92 },
@@ -25,7 +25,7 @@ export default function PartnerBenefits() {
   return (
     <div className="hairline-t bg-paper">
       <Section id="partner-benefits">
-        <SectionHeading eyebrow="Why Vendi 'N' Go" title={PARTNER_BENEFITS.heading} />
+        <SectionHeading eyebrow="Why Vendingo" title={PARTNER_BENEFITS.heading} />
 
         <motion.div
           initial="hidden"
